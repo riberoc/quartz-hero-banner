@@ -1,0 +1,118 @@
+{
+  "name": "quartz-hero-banner",
+  "version": "0.1.0",
+  "description": "A cover-image hero banner component for Quartz v5.",
+  "type": "module",
+  "license": "MIT",
+  "homepage": "https://github.com/riberoc/quartz-hero-banner",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/riberoc/quartz-hero-banner"
+  },
+  "bugs": {
+    "url": "https://github.com/riberoc/quartz-hero-banner/issues"
+  },
+  "keywords": [
+    "quartz",
+    "quartz-plugin",
+    "hero",
+    "banner",
+    "cover-image"
+  ],
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./components": {
+      "types": "./dist/components/index.d.ts",
+      "import": "./dist/components/index.js"
+    },
+    "./types": {
+      "types": "./dist/types.d.ts",
+      "import": "./dist/types.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier package.json README.md tsconfig.json tsup.config.ts src --check",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "preact": ">=10.0.0"
+  },
+  "dependencies": {
+    "@quartz-community/types": "^0.3.0"
+  },
+  "devDependencies": {
+    "@quartz-community/types": "^0.3.0",
+    "@types/node": "^24.0.0",
+    "preact": "^10.28.2",
+    "prettier": "^3.6.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.0"
+  },
+  "quartz": {
+    "name": "hero-banner",
+    "displayName": "Hero Banner",
+    "category": "component",
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "dependencies": [],
+    "defaultOrder": 50,
+    "defaultEnabled": true,
+    "defaultOptions": {
+      "coverProperties": [
+        "cover",
+        "socialImage",
+        "image"
+      ],
+      "showDate": true,
+      "dateLocale": "en-US",
+      "minHeight": "200px"
+    },
+    "optionSchema": {
+      "coverProperties": {
+        "type": "array",
+        "description": "Frontmatter keys checked for a cover image."
+      },
+      "showDate": {
+        "type": "boolean",
+        "description": "Show the modified or created date."
+      },
+      "dateLocale": {
+        "type": "string",
+        "description": "Locale used to format the date."
+      },
+      "minHeight": {
+        "type": "string",
+        "description": "Minimum banner height in CSS units."
+      }
+    },
+    "components": {
+      "HeroBanner": {
+        "displayName": "Hero Banner",
+        "defaultPosition": "beforeBody",
+        "defaultPriority": 10
+      }
+    }
+  },
+  "engines": {
+    "node": ">=22",
+    "npm": ">=10.9.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
