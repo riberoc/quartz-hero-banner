@@ -2,6 +2,11 @@
 
 A Quartz v5 community plugin that renders a note's cover image as a hero banner, with the note title and modified/created date overlaid on top.
 
+## Example
+
+An example of how it looks is below:
+![example](example.png)
+
 ## Install
 
 From a Quartz v5 site:
