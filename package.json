@@ -1,7 +1,7 @@
 {
   "name": "quartz-hero-banner",
   "version": "0.1.0",
-  "description": "A cover-image hero banner component for Quartz v5.",
+  "description": "A Quartz v5 component plugin that turns Obsidian cover images into responsive hero banners.",
   "type": "module",
   "license": "MIT",
   "homepage": "https://github.com/riberoc/quartz-hero-banner",
@@ -15,9 +15,17 @@
   "keywords": [
     "quartz",
     "quartz-plugin",
+    "quartz-v5",
+    "quartz-component",
+    "obsidian",
+    "digital-garden",
+    "static-site-generator",
     "hero",
     "banner",
-    "cover-image"
+    "hero-banner",
+    "cover-image",
+    "frontmatter",
+    "preact"
   ],
   "files": [
     "dist",
@@ -67,7 +75,7 @@
     "name": "hero-banner",
     "displayName": "Hero Banner",
     "category": "component",
-    "version": "1.0.0",
+    "version": "0.1.0",
     "quartzVersion": ">=5.0.0",
     "dependencies": [],
     "defaultOrder": 50,
